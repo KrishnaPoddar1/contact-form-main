@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <section class="main">
+      <form id="myForm">
+        <h1>Contact Us</h1>
+        <section class="content" id="first">
+          <label for="firstName">First Name <span>*</span></label>
+          <input type="text" name="firstName" id="firstName" aria-required="true">
+          <p class="error hidden">This field is required</p>
+        </section>
+        <section class="content" id="last">
+          <label for="lastName">Last Name <span>*</span></label>
+          <input type="text" name="lastName" id="lastName" aria-required="true">
+          <p class="error hidden">This field is required</p>
+        </section>
+        <section class="content" id="ema">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="text" name="email" id="email" aria-required="true">
+          <p class="error hidden">This field is required</p>
+          <p class="email-error hidden">Please enter a valid email address</p>
+        </section>
+        <section class="content" id="query">
+          <label for="">Query Type <span>*</span></label>
+          <section  id="grid-section">
+            <section class="box" id="b1" onclick="handlebox1()">
+              <input type="radio" name="query" id="general" aria-required="true"><label for="general">General Enquiry</label>
+            </section>
+            <section class="box" id="b2" onclick="handlebox2()">
+              <input type="radio" name="query" id="support" aria-required="true"><label for="support">Support Request</label>
+            </section>
+          </section>
+          <p class="error hidden">Please select a query type</p>
+        </section>
+        <section class="content" id="mess">
+          <label for="message">Message <span>*</span></label>
+          <textarea name="message" id="message" cols="40" rows="10" aria-required="true"></textarea>
+          <p class="error hidden">This field is required</p>
+        </section>
+        <section class="checkbox" id="check">
+          <input type="checkbox" name="consent" id="consent" aria-required="true">
+          <label for="consent">I consent to being contacted by the team <span>*</span></label>
+          <p class="error hidden">To submit this form, please consent to being contacted</p>
+        </section>
+        <section class="button">
+        <button type="submit"><b>Submit</b></button>
+      </section>
+      </form>
+      <section class="success hidden">
+        <section class="img-container">
+          <img src="./assets/images/icon-success-check.svg" alt="sucess icon">
+          <p><b>Message Sent!</b></p>
+        </section>
+        <section class="text-container">
+          
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </section>
+      </section>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
